@@ -1,0 +1,138 @@
+.header-modal {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1029;
+  height: 100%;
+  bottom: 0;
+  background: #fff;
+}
+
+/* .header-modal .modal-logo {
+  width: 20rem;
+} */
+
+.header-modal .modal-logo img {
+}
+
+.header-modal .modal {
+  width: 400px;
+  float: right;
+  right: -400px;
+  left: auto;
+  padding: 0 !important;
+  bottom: 0;
+  display: block;
+  opacity: 1;
+  transition: ease-in-out 0.3s;
+}
+
+.header-modal.active .modal {
+  box-shadow: -4px 0 7px rgb(0 0 0/30%);
+  right: 0;
+}
+
+.header-modal .modal-dialog {
+  background: #fff;
+  margin: 0;
+  height: 100%;
+  transform: inherit !important;
+}
+
+.header-modal .modal-content {
+  border-radius: 0;
+  border: none;
+  padding: 30px;
+}
+
+.header-modal .modal-header {
+  display: block;
+  /* background: #1d1e33c2; */
+  margin-left: -30px;
+  margin-right: -30px;
+  border-radius: 0;
+  margin-top: -30px;
+  box-shadow: 0 4px 7px rgb(0 0 0 / 46%);
+  border: none;
+  padding: 20px 30px;
+}
+
+.header-modal .modal-body {
+  padding: 0;
+}
+
+.modal-body .social-links li {
+  background-color: var(--color-secondary);
+}
+
+.header-modal .modal-header h5 {
+  font-size: 28px;
+  color: #fff;
+  border-color: #d0d0d0;
+  border: none;
+  font-weight: 600;
+}
+
+.header-modal .btn-close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: #000;
+  opacity: 1;
+  background-image: inherit;
+  transition: ease-in-out 0.3s;
+}
+
+.header-modal .btn-close svg {
+  position: absolute;
+  content: "";
+  font-size: 35px;
+  top: 15px;
+  right: 10px;
+}
+
+.modal-social-media {
+  margin-top: 30px;
+  border-top: 1px solid #d0d0d0;
+  padding-top: 30px;
+}
+
+.modal-social-media h3 {
+  margin-bottom: 20px;
+  font-size: 2.8rem;
+}
+
+.modal-social-media ul {
+  display: flex;
+}
+
+.modal-social-media ul li a {
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  display: block;
+  line-height: 42px;
+  text-align: center;
+  color: #fff;
+  border-radius: 100%;
+  transition: ease-in-out 0.5s;
+}
+
+.modal-social-media ul li + li {
+  margin-left: 12px;
+}
+.modal-social-media ul li.facebook a {
+  background: #3b5998;
+}
+
+.modal-social-media ul li.twitter a {
+  background: #1da1f2;
+}
+
+.modal-social-media ul li.youtube a {
+  background: red;
+}
+
+.modal-social-media ul li.instagram a {
+  background: #c13584;
+}

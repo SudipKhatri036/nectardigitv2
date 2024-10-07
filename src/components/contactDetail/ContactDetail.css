@@ -1,0 +1,64 @@
+.contact-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.contact-icon {
+  margin-right: 25px;
+}
+
+.contact-icon svg {
+  color: #dc3b05;
+  height: 60px;
+  width: 60px;
+  padding: 1.2rem;
+  line-height: 70px;
+  background: #f7f7f7;
+  transition: ease-in-out 0.3s;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.contact-icon .email-icon {
+  height: 65px;
+  width: 65px;
+}
+
+.contact-content span {
+  display: block;
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.contact-wrap:hover .contact-icon svg {
+  background: #dc3b05;
+}
+
+.contact-wrap:hover .contact-icon svg {
+  color: #fff;
+}
+
+.contact-content p {
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-top: 5px;
+  line-height: 24px;
+}
+
+@media (max-width: 991px) {
+  .contact-wrap {
+    justify-content: flex-start;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-wrap {
+    border-top: 1px solid #e2e2e2;
+    padding-top: 20px;
+    margin-bottom: 25px;
+  }
+}

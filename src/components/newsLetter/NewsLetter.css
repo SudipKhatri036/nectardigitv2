@@ -1,0 +1,127 @@
+.newsletter {
+  padding-bottom: 90px;
+  position: relative;
+}
+
+.newsletter-wrap {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-color: #353950;
+  border-radius: 8px;
+  justify-content: space-between;
+}
+
+.newsletter-wrap h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.newsletter-form {
+  position: relative;
+}
+
+.newsletter-form .form-control {
+  font-size: 1.6rem;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #e8e8e8;
+  color: #fff;
+  border-radius: 0;
+}
+
+.newsletter-form .form-control::placeholder {
+  color: #dedede;
+  opacity: 0.8;
+}
+
+.newsletter-form .form-control:focus {
+  box-shadow: none;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.newsletter-input-cont {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newsletter-input-cont div {
+  width: 60%;
+  position: relative;
+}
+
+.newsletter-input-cont .tmp-btn {
+  width: 50%;
+}
+
+.letter-error {
+  font-size: 1.2rem;
+  color: tomato;
+  position: absolute;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1100px) {
+  .newsletter {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 991px) {
+  .newsletter {
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter-input-cont .tmp-btn {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .newsletter-wrap h3 {
+    font-size: 20px;
+  }
+  .newsletter-form .form-control {
+    border-radius: 0;
+    padding-right: 20px;
+  }
+
+  .newsletter-input-cont {
+    flex-direction: column;
+  }
+
+  .newsletter-input-cont .tmp-btn {
+    width: 100%;
+  }
+}
+
+@keyframes rotateme {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes movescale {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}

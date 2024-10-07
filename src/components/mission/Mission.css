@@ -1,0 +1,43 @@
+.mission {
+  margin-top: 60px;
+}
+
+.mission-cont {
+  margin-bottom: 2rem;
+}
+
+.mission-wrap {
+  text-align: center;
+  border: 1px solid #efefef;
+  padding: 20px;
+  border-radius: 4px;
+  height: 100%;
+  transition: ease-in-out 0.5s;
+}
+
+.mission-wrap svg {
+  font-size: 50px;
+  color: #dc3b05;
+}
+
+.mission-wrap span {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.mission-wrap p {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.hvr-buzz-out:hover,
+.hvr-buzz-out:focus,
+.hvr-buzz-out:active {
+  animation-name: hvr-buzz-out;
+  animation-duration: 0.85s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}

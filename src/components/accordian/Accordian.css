@@ -1,0 +1,105 @@
+.accordion {
+  background-color: white;
+}
+
+.accordian-wrapper {
+  padding: 3rem;
+}
+
+.accordion .card {
+  border: none;
+}
+
+.accordion .card-header {
+  background-color: transparent;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding-block: 1rem;
+  color: black;
+}
+
+.accordian-icon svg {
+  font-size: 3rem;
+  padding: 0.8rem;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  transition: all 0.5s;
+}
+
+.accordion-header.accordion-active svg {
+  background-color: var(--color-primary);
+}
+
+.accordion-header .arrow {
+  font-size: 1.5rem;
+  transform: rotate(40deg);
+  transition: all 0.5s;
+  opacity: 0.7;
+  background-color: white !important ;
+}
+
+.accordion-header.accordion-active .arrow {
+  color: var(--color-primary);
+}
+
+.accordion-header .arrow.faq-open {
+  transform: rotate(0);
+}
+
+.accordion-header .accordion-button {
+  font-size: 1.8rem;
+  color: inherit;
+  font-weight: 700;
+  border: none;
+}
+
+.accordion-header.accordion-active .accordion-button,
+.accordion-header.accordion-active .arrow {
+  color: var(--color-primary);
+}
+
+.accordion > .card > .card-header {
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+
+.accordion-button::after {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion .card-body p {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.accordian-more-qs {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: black;
+}
+
+.accordian-more-qs h4 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.accordian-more-qs p {
+  color: white;
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 1.2px;
+}
+
+.accordian-more-qs a {
+  color: var(--color-primary);
+}

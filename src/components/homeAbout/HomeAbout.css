@@ -1,0 +1,139 @@
+.home-about {
+  background-image: url(../images/bg7.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  position: relative;
+  z-index: 0;
+  padding: 8rem 0;
+}
+
+.home-about:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(27 80 131 / 40%);
+  opacity: 0.702;
+  z-index: -1;
+}
+
+.home-about-title {
+  text-align: center;
+  max-width: 80rem;
+  margin: auto;
+  margin-bottom: 6rem;
+}
+
+.home-about-title h3 {
+  font-size: 4.5rem;
+  color: #fff;
+  line-height: 5.2rem;
+}
+
+.home-about-title p {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.home-about-title .main-btn1:hover {
+  color: white;
+}
+
+.home-about-wrap {
+  display: flex;
+  box-shadow: 0 6px 20px 0 rgb(0 0 0 / 10%);
+  flex-wrap: wrap;
+  background: #fff;
+  margin-bottom: -237px;
+}
+
+.home-about-item {
+  padding: 3rem;
+  text-align: center;
+  width: 16.6666%;
+  border-right: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.home-about-item:before {
+  content: "";
+  background: #fff;
+  width: 110%;
+  height: 110%;
+  display: inline-block;
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.96);
+  z-index: -1;
+  transition: ease-in-out 0.3s;
+}
+
+.home-about-item svg {
+  font-size: 4rem;
+  color: var(--color-primary);
+  transition: ease-in-out 0.3s;
+}
+
+.home-about-item:hover.home-about-item svg {
+  color: var(--color-secondary);
+}
+
+.home-about-item:hover:before {
+  box-shadow: 5px 5px 24px 0px rgb(2 45 98 / 10%);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.home-about-item span {
+  display: block;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: ease-in-out 0.3s;
+}
+
+.home-about-item:hover.home-about-item span {
+  color: var(--color-primary);
+}
+
+@media (max-width: 1999px) {
+  .home-about-item {
+    width: 20%;
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 991px) {
+  .home-about-item {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-about-item {
+    width: 33.3333%;
+  }
+}
+
+@media (max-width: 575px) {
+  .home-about-item {
+    width: 50%;
+    padding: 20px;
+  }
+
+  .home-about-item span {
+    font-size: 15px;
+    line-height: 18px;
+  }
+}

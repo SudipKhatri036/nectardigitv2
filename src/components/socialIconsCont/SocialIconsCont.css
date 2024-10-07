@@ -1,0 +1,26 @@
+.social-links {
+  margin-top: 2rem;
+}
+
+.social-links ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-links li {
+  padding: 0.7rem 1.2rem;
+  background-color: #1d1e33;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-links li a {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.social-links li:hover {
+  background-color: var(--color-primary);
+  transform: scale(1.1);
+}

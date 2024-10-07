@@ -1,0 +1,71 @@
+.home-counters {
+  padding: 6rem 0;
+}
+
+.counter-wrap {
+  background-color: white;
+  padding: 1rem;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.counter-icon {
+  margin-right: 2.5rem;
+  height: 90px;
+  min-width: 90px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flx-cont {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.counter-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-content span {
+  display: block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.counter-content p {
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #000;
+  opacity: 0.8;
+  line-height: 1.2;
+  margin-top: -5px;
+}
+
+@media (max-width: 991px) {
+  .home-counters.mt {
+    margin-top: 40px;
+  }
+
+  .counter-wrap {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .counters.mt {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 575px) {
+  .counter-wrap {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,53 @@
+.faq {
+  background: url("/images/02.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.faq-header {
+  text-align: center;
+}
+
+.faq-subtitle {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.faq-header h2 {
+  font-size: 4rem;
+}
+
+.faq-subtitle svg {
+  margin-right: 1rem;
+  font-size: 2.2rem;
+}
+
+.faq .row {
+  align-items: center;
+}
+
+.accordian {
+  overflow-anchor: none;
+}
+
+.accordion > .card {
+  overflow: hidden;
+}
+
+.accordion > .card:not(:last-of-type) {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.accordion .collapse {
+  transition: height 0.35s ease; /* Adjust timing and easing as needed */
+}
+
+@media (max-width: 768px) {
+  .faq-img {
+    margin-bottom: 3rem;
+  }
+}

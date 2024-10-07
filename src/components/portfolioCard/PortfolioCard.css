@@ -1,0 +1,22 @@
+.portfolio-wrap {
+  box-shadow: 0 30px 62px 0 rgb(0 0 0 / 15%);
+  margin-bottom: 30px;
+}
+
+.portfolio-img img {
+  transition: ease-in-out 0.3s;
+}
+
+.portfolio-content {
+  background: #fff;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 -1px 7px rgb(0 0 0 / 10%);
+}
+
+.portfolio-content span {
+  display: block;
+  font-size: 18px;
+  color: #090504;
+}

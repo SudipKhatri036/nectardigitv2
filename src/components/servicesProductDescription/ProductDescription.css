@@ -1,0 +1,78 @@
+.single-service-content {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 25px rgb(0 0 0 / 16%);
+}
+
+.single-service-content h3 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.single-service-content p {
+  font-size: 16px;
+  line-height: 27px;
+}
+
+.service-sidebar-wrap {
+  position: sticky;
+  top: 89px;
+}
+
+.service-sidebar-bg h3 {
+  margin-top: -30px;
+  background: #1b5083;
+  color: #fff;
+  padding: 15px 30px;
+}
+
+.service-sidebar {
+  margin-bottom: 6rem;
+}
+
+.service-sidebar ul {
+  margin-top: 30px;
+}
+
+.service-sidebar li {
+  width: 100%;
+}
+
+.service-sidebar ul li button {
+  display: block;
+  background: #edf0fa;
+  color: #090504;
+  padding: 22px 20px 22px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 12px;
+  transition: all 300ms ease-out 0s;
+  position: relative;
+  overflow: hidden;
+  line-height: 22px;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.service-sidebar ul li button svg {
+  font-size: 12px;
+}
+
+.service-contact ul li a {
+  color: #090504;
+  font-size: 17px;
+  position: relative;
+  padding-left: 30px;
+  display: block;
+  transition: ease-in-out 0.3s;
+}
+
+.service-contact ul li {
+  margin-top: 20px;
+}
+
+.service-contact ul li a svg {
+  color: #dc3b05;
+  margin-right: 2rem;
+}

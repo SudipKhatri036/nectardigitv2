@@ -1,0 +1,19 @@
+.portfolio-details {
+  background: #eef3f9;
+}
+.portfolio-details-content {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 25px rgb(0 0 0 / 16%);
+}
+
+.portfolio-details-content h3 {
+  margin-bottom: 20px;
+  background: #1b5083;
+  color: #fff;
+  padding: 15px 30px;
+  margin-top: -30px;
+  margin-right: -30px;
+  margin-left: -30px;
+  font-size: 2.8rem;
+}

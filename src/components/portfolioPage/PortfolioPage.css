@@ -1,0 +1,15 @@
+.portfolio-wrap {
+  box-shadow: 0 30px 62px 0 rgb(0 0 0 / 15%);
+  margin-bottom: 30px;
+}
+
+.portfolio-wrap button {
+  border: none;
+  background: 0 0;
+  padding: 0;
+  width: 100%;
+}
+
+.portfolio-items {
+  text-align: center;
+}

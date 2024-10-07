@@ -1,0 +1,115 @@
+.logo-section.mb {
+  margin-block: 50px;
+}
+
+.logo-section-wrap {
+  background: #022d62;
+  position: relative;
+  z-index: 1;
+  padding: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 3px 7px rgb(0 0 0 / 40%);
+}
+
+.logo-section-wrap .row {
+  align-items: center;
+}
+
+.logo-section-wrap:before {
+  position: absolute;
+  left: -43px;
+  width: 200px;
+  height: 200px;
+  background: #dc3224;
+  content: "";
+  top: -39px;
+  border-radius: 100%;
+}
+
+.logo-section-wrap:after {
+  position: absolute;
+  left: 81px;
+  width: 70px;
+  height: 70px;
+  background: #dc3224;
+  content: "";
+  bottom: -38px;
+  border-radius: 100%;
+}
+
+.logo-title {
+  position: relative;
+}
+
+.logo-title h3 {
+  color: #fff;
+  font-size: 20px;
+}
+
+.client-btn {
+  text-align: center;
+}
+
+.client-btn .btn {
+  font-size: 16px;
+  padding: 16px 34px;
+  line-height: 1;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+}
+
+.client-btn .btn-round:before {
+  content: "";
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  background-color: #dc3224;
+}
+
+.client-btn svg {
+  margin-left: 10px;
+}
+
+.client-btn .btn-primary-round:before {
+  opacity: 1;
+}
+
+.client-btn .btn-round:hover:before {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .logo-section {
+    margin-top: 70px;
+  }
+  .logo-title h3 {
+    font-size: 28px;
+    background: #dc3b05;
+    padding: 10px;
+    text-align: center;
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
+  .logo-section-wrap:before,
+  .logo-section-wrap:after {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .cont {
+    margin-bottom: 2rem;
+  }
+}

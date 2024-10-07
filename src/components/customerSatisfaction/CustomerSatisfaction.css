@@ -1,0 +1,45 @@
+.how-section {
+  background: #eef3f9;
+  position: relative;
+  z-index: 0;
+}
+
+.how-section:before {
+  background-image: url(/images/pattern2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.how-section.pb {
+  padding-bottom: 60px;
+}
+
+.how-section-wrap {
+  min-height: 330px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 3px 25px rgb(0 0 0 / 20%);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.how-section-wrap h3 {
+  margin-top: 25px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.how-section-wrap p {
+  font-size: 15px;
+  line-height: 23px;
+  margin-bottom: 0;
+}

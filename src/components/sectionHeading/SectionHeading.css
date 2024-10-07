@@ -1,0 +1,38 @@
+.heading-cont {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.chart-icon {
+  color: var(--color-primary);
+}
+
+span.title-pattern {
+  padding: 0 1.2rem;
+  font-size: 2rem;
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+}
+
+span.title-pattern:before,
+span.title-pattern:after {
+  content: "";
+  width: 9rem;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  margin: auto;
+}
+
+span.title-pattern:before {
+  left: 100%;
+  background: linear-gradient(to right, #585858 65%, #ffffff 100%);
+}
+
+span.title-pattern::after {
+  right: 100%;
+  background: linear-gradient(to right, #585858 65%, #ffffff 100%);
+}

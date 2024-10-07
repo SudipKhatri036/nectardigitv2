@@ -1,0 +1,44 @@
+.team-wrap {
+  background: #fff;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 20%);
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+.team-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-img:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #1b508369;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.team-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.team-wrap button {
+  border: none;
+  background: 0 0;
+}
+
+.team-content span {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.team-content p {
+  margin-bottom: 0;
+  color: #dc3b05;
+}

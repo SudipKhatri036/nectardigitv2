@@ -1,0 +1,40 @@
+.nav-tabs {
+  margin-bottom: 30px;
+  border: none;
+}
+
+.nav-tabs li .nav-link {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 22px;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+}
+
+.nav-tabs li .nav-link svg {
+  margin-right: 5px;
+  vertical-align: middle;
+  color: #dc3a04;
+}
+
+.nav-tabs .nav-link {
+  color: #000;
+}
+
+.nav-tabs .nav-link {
+  background: #f0f0f0;
+}
+
+.nav-tabs li .nav-link.active {
+  background: #db3a04;
+  color: #fff;
+  border-color: #db3a04;
+}
+
+.nav-tabs li .nav-link.active svg {
+  color: #fff;
+}
+
+.nav-tabs li + li {
+  margin-left: 10px;
+}

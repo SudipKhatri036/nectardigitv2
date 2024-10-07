@@ -1,0 +1,7 @@
+.home-blog {
+  margin-top: 7rem;
+}
+
+.home-blog .blog-content ul {
+  display: none;
+}

@@ -1,0 +1,55 @@
+.about-us {
+  position: relative;
+  background: #fff;
+  z-index: 0;
+}
+
+.about-us:before {
+  position: absolute;
+  content: "";
+  background-image: url(/images/shape5.png);
+  height: 260px;
+  width: 260px;
+  top: 10%;
+  right: 10%;
+  background-size: contain;
+  animation-name: spinInfinit;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  z-index: -1;
+}
+
+.about-us-content h2 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 43px;
+  position: relative;
+}
+
+.about-us-content h2:before {
+  content: "";
+  background: linear-gradient(45deg, #1b5083, #56aee3) !important;
+  position: absolute;
+  height: 10px;
+  width: 72px;
+  bottom: -20px;
+  left: 0;
+}
+
+.about-us-content h2:after {
+  background: #fff;
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 30px;
+  bottom: -16px;
+  left: 0;
+}
+
+.about-us-content p {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: justify;
+}

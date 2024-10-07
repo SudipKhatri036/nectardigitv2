@@ -1,0 +1,70 @@
+.single-services .services-inner {
+  padding: 30px 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #d9e8fd;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.services-content {
+  margin-top: 30px;
+}
+
+.services-inner .thumbnail {
+  max-width: 110px;
+}
+
+.services-inner a .title {
+  transition: 0.3s;
+  color: #03041c;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.services-content .desctiption {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  color: #6a6c71;
+}
+
+.angle-roted {
+  cursor: pointer;
+}
+
+.angle-roted svg {
+  transform: rotate(318deg);
+  font-size: 3.5rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid black;
+  color: black;
+  transition: all 0.5s;
+}
+
+.angle-roted:hover svg {
+  background: var(--color-primary);
+  border: 1px solid transparent;
+  color: #fff;
+  transform: scale(1.2) translateY(-5px);
+}
+
+.number {
+  font-size: 8rem;
+  font-weight: bold;
+  bottom: -40px;
+  right: 20px;
+  color: var(--color-primary);
+  position: absolute;
+  opacity: 0.5;
+}
+
+@media (max-width: 992px) {
+  .single-services {
+    margin-bottom: 3rem;
+  }
+}
