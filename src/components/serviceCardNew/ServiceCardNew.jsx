@@ -38,7 +38,7 @@ function ServiceCardNew({ service }) {
             </a>
           </div>
           <div className="number">
-            {service.id >= 10 ? service.id - 1 : `0${service.id - 1}`}
+            {service.id > 10 ? service.id - 1 : `0${service.id - 1}`}
           </div>
         </div>
       </div>
