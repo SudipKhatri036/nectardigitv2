@@ -11,10 +11,12 @@ function ServiceCardNew({ service }) {
         <div className="services-inner  with-shadow card-bg-color">
           <div className="thumbnail">
             <img src="/images/web-dev.png" alt={service.title} />
+
             {/* <img
-              src="https://www.nectardigit.com/uploads/photos/service%20icon/digital-marketing-01-1.png"
+              src="https://www.nectardigit.com//uploads/photos/logo/site-logo.png"
               alt={service.title}
             /> */}
+
             {/* <img src={service.image} alt={service.title} /> */}
           </div>
           <div className="services-content">
