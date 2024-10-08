@@ -1,5 +1,5 @@
-import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { MdLocationPin, MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
@@ -11,6 +11,12 @@ function Header() {
   const [isAsideOpen, setIsAsideOpen] = useState(false);
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    setIsNavOpen(false);
+  }, [location]);
 
   return (
     <header className="header">
