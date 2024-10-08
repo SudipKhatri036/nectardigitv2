@@ -29,6 +29,12 @@
   color: var(--color-primary);
 }
 
+@media (max-width: 768px) {
+  .video-modal-cont {
+    width: 90%;
+  }
+}
+
 @keyframes openVideo {
   from {
     background-color: white;
