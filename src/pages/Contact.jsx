@@ -2,6 +2,7 @@ import PageHero from "../components/pageHero/PageHero";
 import ContactDetail from "../components/contactDetail/ContactDetail";
 import ContactForm from "../components/contactForm/ContactForm";
 import NewContact from "../components/newContact/NewContact";
+
 import CompanyMap from "../components/companyMap/CompanyMap";
 
 function Contact() {

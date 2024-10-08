@@ -1,5 +1,3 @@
-import "./CompanyMap.css";
-
 function CompanyMap() {
   return (
     <section className="map">
