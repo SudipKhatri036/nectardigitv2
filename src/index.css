@@ -217,6 +217,12 @@ textarea {
   }
 }
 
+@media (max-width: 350px) {
+  .tmp-btn {
+    font-size: 10px;
+  }
+}
+
 /* Animation  */
 .hvr-buzz-out {
   transform: perspective(1px) translateZ(0);

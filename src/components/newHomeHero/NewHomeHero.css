@@ -346,9 +346,6 @@
     font-size: 1.4rem;
   }
 
-  .tmp-btn {
-    font-size: 10px;
-  }
   .vedio-icon .play-video p.text {
     display: none;
   }
@@ -374,5 +371,11 @@
     margin-top: 0;
     top: 525px;
     right: 5%;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero-swiper-cont .tmp-btn {
+    font-size: 10px;
   }
 }
