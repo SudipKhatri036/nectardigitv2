@@ -4,7 +4,7 @@ import PageHero from "../components/pageHero/PageHero";
 import SectionHeading from "../components/sectionHeading/SectionHeading";
 import ServiceCardNew from "../components/serviceCardNew/ServiceCardNew";
 import Loader from "../components/loader/Loader";
-import "./services.css";
+import "./Services.css";
 
 function Services() {
   const { data, isLoading, error } = useAxios("/services");

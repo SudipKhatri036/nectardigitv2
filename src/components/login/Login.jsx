@@ -110,8 +110,11 @@ function Login() {
               Forgot password?
             </a>
           </div> */}
-          <div class="form-group">
-            <button class="btn btn-primary btn-block btn-flat" type="submit">
+          <div className="form-group">
+            <button
+              className="btn btn-primary btn-block btn-flat"
+              type="submit"
+            >
               <FaSignInAlt /> Login
             </button>
           </div>
