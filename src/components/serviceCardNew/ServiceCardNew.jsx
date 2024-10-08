@@ -21,14 +21,14 @@ function ServiceCardNew({ service }) {
             <a>
               <h5 className="title">{service.title}</h5>
             </a>
-            <p
+            <div
               className="description"
               dangerouslySetInnerHTML={{
                 __html: `${service.description
                   .replace(/<[^>]+>/g, "")
                   .slice(0, 190)}...`,
               }}
-            ></p>
+            ></div>
 
             <a
               className="angle-roted"
