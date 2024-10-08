@@ -10,17 +10,25 @@ function ServiceCardNew({ service }) {
       <div className="single-services service-style-one">
         <div className="services-inner  with-shadow card-bg-color">
           <div className="thumbnail">
-            <img src="/images/web-dev.png" alt="Business consulting services" />
+            <img src="/images/web-dev.png" alt={service.title} />
+            {/* <img
+              src="https://www.nectardigit.com/uploads/photos/service%20icon/digital-marketing-01-1.png"
+              alt={service.title}
+            /> */}
+            {/* <img src={service.image} alt={service.title} /> */}
           </div>
           <div className="services-content">
             <a>
               <h5 className="title">{service.title}</h5>
             </a>
-            <p className="desctiption">
-              Cross-browser and cross-device compatibility driven by mobile
-              responsiveness all under one roof. Starting from basic website
-              designs, including CMS...
-            </p>
+            <p
+              className="description"
+              dangerouslySetInnerHTML={{
+                __html: `${service.description
+                  .replace(/<[^>]+>/g, "")
+                  .slice(0, 190)}...`,
+              }}
+            ></p>
 
             <a
               className="angle-roted"
