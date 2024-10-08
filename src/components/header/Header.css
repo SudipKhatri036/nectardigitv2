@@ -62,7 +62,7 @@
 
 .sub-menu {
   position: absolute;
-  top: 0;
+  top: 65%;
   background-color: white;
   box-shadow: 0 4px 8px rgb(0 0 0/46%);
   opacity: 0;
