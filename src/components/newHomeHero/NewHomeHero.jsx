@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import VideoModal from "../videoModal/VideoModal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function NewHomeHero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,9 +48,9 @@ function NewHomeHero() {
                         automate your marketing and customer service.
                       </p>
                       <div className="button-area-banner-one">
-                        <a href="service.html" className="tmp-btn btn-primary">
+                        <Link to={"/contact"} className="tmp-btn btn-primary">
                           Get Started Now
-                        </a>
+                        </Link>
 
                         <div
                           className="vedio-icon"
