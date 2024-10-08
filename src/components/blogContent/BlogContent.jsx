@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FaCalendar } from "react-icons/fa6";
 import { FaSearch, FaUser } from "react-icons/fa";
 import useAxios from "../../hooks/useAxios";
@@ -97,65 +97,65 @@ function BlogContent() {
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
+                        <Link>
                           <h4>Technology</h4>
-                        </a>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Marketing</h4>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Next in AI</h4>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Reviews</h4>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Business</h4>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Resources</h4>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Entertainment</h4>
+                        </Link>
                       </div>
                     </li>
                     <li>
                       <div className="post-img"></div>
                       <div className="post-content">
-                        <a href="">
-                          <h4>Technology</h4>
-                        </a>
+                        <Link>
+                          <h4>Podcasts</h4>
+                        </Link>
                       </div>
                     </li>
                   </ul>

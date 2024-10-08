@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   FaChevronRight,
   FaEnvelope,
@@ -16,9 +16,24 @@ import "./ProductDescription.css";
 function ServiceProductDescription() {
   const { id } = useParams();
 
+  const navigate = useNavigate();
+
   const { data, isLoading, error } = useAxios(`/services/${id}`, "GET", null, [
     id,
   ]);
+
+  const { data: service } = useAxios("services");
+
+  const filteredService = service?.data.filter(
+    (ser) => ser.id !== data?.data.id
+  );
+
+  let randomNum = Math.floor(Math.random() * filteredService?.length) + 1;
+
+  const maxNum =
+    randomNum === filteredService?.length - 1
+      ? (randomNum = 0) + 5
+      : randomNum + 5;
 
   if (isLoading) <Loader />;
 
@@ -59,26 +74,21 @@ function ServiceProductDescription() {
                   <h3>Our Services</h3>
 
                   <ul>
-                    <li>
-                      <button>
-                        <FaChevronRight /> Open-Source Customization
-                      </button>
-                    </li>
-                    <li>
-                      <button>
-                        <FaChevronRight /> Open-Source Customization
-                      </button>
-                    </li>
-                    <li>
-                      <button>
-                        <FaChevronRight /> Open-Source Customization
-                      </button>
-                    </li>
-                    <li>
-                      <button>
-                        <FaChevronRight /> Open-Source Customization
-                      </button>
-                    </li>
+                    {filteredService
+                      ?.slice(randomNum, maxNum)
+                      .map((service) => {
+                        return (
+                          <li key={service.id}>
+                            <button
+                              onClick={() =>
+                                navigate(`/services/${service?.id}`)
+                              }
+                            >
+                              <FaChevronRight /> {service.title}
+                            </button>
+                          </li>
+                        );
+                      })}
                   </ul>
                 </div>
 

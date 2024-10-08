@@ -13,9 +13,10 @@ function RelatedPosts({ viewId }) {
 
   const filterdData = data?.data.filter((blog) => blog.id !== viewId);
 
-  const randomNum = Math.floor(Math.random() * filterdData.length) + 1;
+  let randomNum = Math.floor(Math.random() * filterdData.length) + 1;
 
-  const maxNum = randomNum === filterdData.length - 1 ? 0 + 3 : randomNum + 3;
+  const maxNum =
+    randomNum === filterdData.length - 1 ? (randomNum = 0) + 3 : randomNum + 3;
 
   return (
     <section className="related-blog pt pb">
