@@ -36,9 +36,7 @@ function NewContact() {
     if (!validEmail && !validEmail) setIsValidData(false);
     else setIsValidData(true);
 
-    if (!validName && !validEmail && !formData.contactNum) return;
-
-    if (isValidData) {
+    if (validName && validEmail && formData.contactNum) {
       setIsPosting(true);
       axios
         .post("https://jsonplaceholder.typicode.com/posts", formData)
@@ -62,8 +60,6 @@ function NewContact() {
         .finally(() => {
           setIsPosting(false);
         });
-    } else {
-      return;
     }
   };
 

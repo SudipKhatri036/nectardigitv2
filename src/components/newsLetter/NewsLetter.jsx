@@ -26,16 +26,20 @@ function NewsLetter() {
         .then((resp) => {
           console.log(resp);
           setEmail("");
-          toast.success("Newsletter Subscribed", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+          {
+            if (!toast.isActive("news-letter")) {
+              toast.success("Newsletter Subscribed", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+              });
+            }
+          }
         })
         .catch((error) => {
           console.log(error);
@@ -94,7 +98,7 @@ function NewsLetter() {
               </div>
             </form>
           </div>
-          <ToastContainer />
+          <ToastContainer containerId={"news-letter"} />
         </div>
       </div>
     </section>
