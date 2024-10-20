@@ -147,16 +147,6 @@
     align-items: flex-start;
   }
 
-  .testimonal-cont .swiper-button-next .swiper-button-prev,
-  .testimonal-cont .swiper-button-next .swiper-button-next {
-    min-width: 30px;
-  }
-
-  .testimonials-button-area .button-next-prev .swiper-button-prev,
-  .testimonials-button-area .button-next-prev .swiper-button-next {
-    height: 35px;
-  }
-
   .testimonials-button-area .button-next-prev .swiper-button-prev {
     top: 310px;
     right: 30px;

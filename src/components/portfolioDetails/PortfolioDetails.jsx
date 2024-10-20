@@ -15,6 +15,8 @@ function PortfolioDetails() {
 
   if (error) return <p className="fetch-error">Error: {error.message}</p>;
 
+  const { title, date, image, logo } = data?.data || {};
+
   return (
     <section className="portfolio-details pt pb">
       <div className="container">
@@ -22,27 +24,27 @@ function PortfolioDetails() {
           <div className="col-md-6">
             <div className="portfolio-details-img">
               <img
-                src={data?.data.image}
-                alt="Air logistics"
-                referrerpolicy="no-referrer"
+                src={image || logo}
+                alt={"Air logistics"}
+                referrerPolicy="no-referrer"
               />
             </div>
           </div>
           <div className="col-md-6">
             <div className="portfolio-details-content">
-              <h3>{data?.data.title}</h3>
+              <h3>{title}</h3>
               <span>
-                <p>{data?.data.title} </p>
+                <p>{title} </p>
               </span>
               <ul>
                 <li>
                   <FaCode /> Developed By : Nectar Digit
                 </li>
                 <li>
-                  <FaUser /> Clients Name : {data?.data.title}
+                  <FaUser /> Clients Name : {title}
                 </li>
                 <li>
-                  <FaCalendar /> Date : {data?.data.date}
+                  <FaCalendar /> Date : {date}
                 </li>
               </ul>
             </div>

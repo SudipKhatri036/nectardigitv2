@@ -10,7 +10,7 @@
 
 .btn--pulse-up {
   width: 60px;
-  height: 50px;
+  height: 60px;
   background-color: var(--color-primary);
   border: none;
   cursor: pointer;
@@ -27,7 +27,7 @@
 .btn--pulse-up:after {
   content: "";
   width: 60px;
-  height: 50px;
+  height: 60px;
   position: absolute;
   top: 0;
   left: 0;
@@ -37,6 +37,17 @@
   background: linear-gradient(90deg, #970d0375 0%, #083c5e73 100%);
   z-index: -1;
   animation: pulse 1.5s linear infinite;
+}
+
+@media (max-width: 500px) {
+  .btn--pulse-up {
+    width: 40px;
+    height: 40px;
+  }
+  .btn--pulse-up::after {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @keyframes pulse {

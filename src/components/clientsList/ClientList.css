@@ -1,9 +1,9 @@
 .logo-section.mb {
-  margin-block: 50px;
+  margin-block: 30px;
 }
 
 .logo-section-wrap {
-  background: #022d62;
+  background: #fff;
   position: relative;
   z-index: 1;
   padding: 30px;
@@ -21,7 +21,7 @@
   left: -43px;
   width: 200px;
   height: 200px;
-  background: #dc3224;
+  background: var(--color-secondary);
   content: "";
   top: -39px;
   border-radius: 100%;
@@ -32,7 +32,7 @@
   left: 81px;
   width: 70px;
   height: 70px;
-  background: #dc3224;
+  background: var(--color-secondary);
   content: "";
   bottom: -38px;
   border-radius: 100%;
@@ -60,7 +60,8 @@
   z-index: 1;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .client-btn .btn-round:before {
@@ -73,7 +74,7 @@
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
   z-index: -1;
-  background-color: #dc3224;
+  background-color: var(--color-primary);
 }
 
 .client-btn svg {
@@ -88,13 +89,17 @@
   width: 100%;
 }
 
+.client-btn .btn-round:hover {
+  color: white;
+}
+
 @media (max-width: 991px) {
   .logo-section {
     margin-top: 70px;
   }
   .logo-title h3 {
     font-size: 28px;
-    background: #dc3b05;
+    background: var(--color-secondary);
     padding: 10px;
     text-align: center;
     margin-top: -30px;
@@ -111,5 +116,31 @@
 @media (min-width: 768px) {
   .cont {
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-section .container {
+    max-width: 768px;
+  }
+  .carosel-cont {
+    margin-top: 1rem;
+  }
+
+  .client-btn .btn {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .logo-section-wrap {
+    padding: 30px 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .client-btn .btn {
+    font-size: 12px;
+    margin-top: 2rem;
   }
 }

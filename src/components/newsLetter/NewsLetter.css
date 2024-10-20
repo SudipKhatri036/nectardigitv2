@@ -66,12 +66,6 @@
   letter-spacing: 1px;
 }
 
-@media (max-width: 1100px) {
-  .newsletter {
-    padding-top: 70px;
-  }
-}
-
 @media (max-width: 991px) {
   .newsletter {
     padding-bottom: 70px;
@@ -79,6 +73,10 @@
 }
 
 @media (max-width: 768px) {
+  .newsletter {
+    padding-block: 30px;
+  }
+
   .newsletter-input-cont .tmp-btn {
     font-size: 1.4rem;
   }

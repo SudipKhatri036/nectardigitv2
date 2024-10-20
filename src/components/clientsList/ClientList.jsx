@@ -29,7 +29,7 @@ function ClientList() {
               <div className="client-btn">
                 <Link
                   to="/portfolio"
-                  className="btn btn-primary-round btn-round text-white"
+                  className="btn btn-primary-round btn-round "
                   title="Portfolio"
                 >
                   View More Clients

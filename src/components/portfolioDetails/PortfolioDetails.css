@@ -46,3 +46,9 @@
   margin-right: 10px;
   color: #dc3b05;
 }
+
+@media (max-width: 768px) {
+  .portfolio-details.pt {
+    padding-top: 40px;
+  }
+}

@@ -12,7 +12,7 @@ import {
 
 function TestimonalSlider() {
   return (
-    <section className="testimonal-cont pt pb">
+    <section className="testimonal-cont mt pt pb">
       <div className="container testimonal-wrapper">
         <div className="row">
           <div className="col-lg-12">

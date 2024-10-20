@@ -12,6 +12,7 @@ import SocialIconsCont from "../socialIconsCont/SocialIconsCont";
 import useAxios from "../../hooks/useAxios";
 import Loader from "../loader/Loader";
 import ScrollToBtn from "../scrollToBtn/ScrollToBtn";
+import CallToABtn from "../callToABtn/CallToABtn";
 
 function Footer() {
   const { data, isLoading, error } = useAxios("/services");
@@ -128,16 +129,36 @@ function Footer() {
                     <FaRegMap />
                   </a>
                 </div>
-                <div className="footer-contact-content">
-                  <a
-                    href="https://g.page/nectardigit?share"
-                    title="Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE, UK and Sundhara, Kathmandu, Nepal"
-                    target="_blank"
-                  >
-                    Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds,
-                    England, IP28 7DE, UK and Sundhara, Kathmandu, Nepal
-                  </a>
-                </div>
+                <ul className="footer-contact-content">
+                  <li>
+                    <a
+                      href="https://g.page/nectardigit?share"
+                      title="Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE, UK and Sundhara, Kathmandu, Nepal"
+                      target="_blank"
+                    >
+                      Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds,
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://g.page/nectardigit?share"
+                      title="Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE, UK and Sundhara, Kathmandu, Nepal"
+                      target="_blank"
+                    >
+                      England, IP28 7DE, UK
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://g.page/nectardigit?share"
+                      title="Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds, England, IP28 7DE, UK and Sundhara, Kathmandu, Nepal"
+                      target="_blank"
+                    >
+                      Sundhara, Kathmandu, Nepal
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               <div className="footer-contact-wrap footer-contact-link">
@@ -187,6 +208,7 @@ function Footer() {
         </div>
       </div>
       <ScrollToBtn />
+      <CallToABtn />
     </footer>
   );
 }

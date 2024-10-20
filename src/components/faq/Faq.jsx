@@ -5,16 +5,8 @@ import "./Faq.css";
 
 function Faq() {
   return (
-    <section className="faq mt pt pb">
+    <section className="faq pt pb">
       <div className="container">
-        {/* <div className="faq-header">
-          <div className="faq-subtitle">
-            <FaLinesLeaning />{" "}
-            <span className="faq-subtitle-txt">Questions and Answers</span>
-          </div>
-          <h2>Frequency Asked Questions</h2>
-        </div> */}
-
         <SectionHeading
           heading="Frequently Asked"
           headingHighlight="Question"

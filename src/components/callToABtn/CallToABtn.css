@@ -1,0 +1,37 @@
+.call-now-button {
+  padding: 11px;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  background: #25cc62;
+  animation: waves-call-now linear 3s infinite;
+  cursor: pointer;
+}
+
+.call-now-button img {
+  width: 35px;
+  filter: invert(1);
+  animation: sm-shake-animation linear 1.5s infinite;
+}
+
+@keyframes waves-call-now {
+  0% {
+    box-shadow: 0 8px 10px rgba(48, 191, 57, 0.3),
+      0 0 0 0 rgba(48, 191, 57, 0.2), 0 0 0 0 rgba(48, 191, 57, 0.2);
+  }
+
+  40% {
+    box-shadow: 0 8px 10px rgba(48, 191, 57, 0.3),
+      0 0 0 35px rgba(48, 191, 57, 0.2), 0 0 0 0 rgba(48, 191, 57, 0.2);
+  }
+
+  80% {
+    box-shadow: 0 8px 10px rgba(48, 191, 57, 0.3), 0 0 0 55px transparent,
+      0 0 0 26.7px rgba(48, 191, 57, 0.067);
+  }
+
+  100% {
+    box-shadow: 0 8px 10px rgba(48, 191, 57, 0.3), 0 0 0 80px transparent,
+      0 0 0 40px transparent;
+  }
+}

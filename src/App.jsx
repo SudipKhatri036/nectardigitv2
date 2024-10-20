@@ -35,19 +35,6 @@ import Loader from "./components/loader/Loader";
 import { ServicesProvider } from "./context/ServicesContext";
 import { MarketingProvider } from "./context/MarketingContext";
 
-// import About from "./pages/About";
-// import Services from "./pages/Services";
-// import Portfolio from "./pages/Portfolio";
-// import Blog from "./pages/Blog";
-// import Contact from "./pages/Contact";
-// import ServiceProductDescription from "./components/servicesProductDescription/ProductDescription";
-// import BlogContent from "./components/blogContent/BlogContent";
-// import PortfolioDetails from "./components/portfolioDetails/PortfolioDetails";
-// import OurTeam from "./components/ourTeam/OurTeam";
-// import Career from "./components/career/Career";
-// import ErrorPage from "./components/errorPage/ErrorPage";
-// import MarketingContent from "./pages/MarketingContent";
-
 function App() {
   return (
     <BrowserRouter>

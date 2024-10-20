@@ -1,3 +1,7 @@
 .service-page-cont {
   margin-bottom: 4rem;
 }
+
+.service-page-cont .single-services .services-inner {
+  background-color: #d9e8fd;
+}

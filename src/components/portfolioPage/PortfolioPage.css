@@ -13,3 +13,19 @@
 .portfolio-items {
   text-align: center;
 }
+
+@media (max-width: 575px) {
+  .portfolio-items .hvr-wobble-bottom {
+    width: 100%;
+  }
+
+  .portfolio-items .portfolio-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .portfolio-page .mt {
+    margin-top: 30px;
+  }
+}

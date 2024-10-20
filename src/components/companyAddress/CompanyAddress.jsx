@@ -34,10 +34,17 @@ function CompanyAddress() {
           </div>
           <div className="content">
             <span>Address</span>
-            <a href="#">
-              Unit 82A James Carter Road, Mildenhall, Bury St. Edmunds, England,
-              IP28 7DE, UK and Sundhara, Kathmandu, Nepal
-            </a>
+            <ul>
+              <li>
+                <a href="#">James Carter Road, Mildenhall</a>
+              </li>
+              <li>
+                <a href="#">England, IP28 7DE, UK</a>
+              </li>
+              <li>
+                <a href="#">Sundhara, Kathmandu, Nepal</a>
+              </li>
+            </ul>
           </div>
         </div>
       </li>

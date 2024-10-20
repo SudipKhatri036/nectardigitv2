@@ -33,23 +33,6 @@ function Header() {
             </Link>
           </div>
           <nav className={`nav${isNavOpen ? " nav--open" : ""}`}>
-            <div className="location-nav">
-              <div className="location-icon-box">
-                <a href="tel:+977-01-5904030">
-                  <FaPhoneAlt />
-                </a>
-              </div>
-              <div className="location-icon-box">
-                <a href="https://www.google.com/maps" target="_blank">
-                  <MdLocationPin />
-                </a>
-              </div>
-              <div className="location-icon-box">
-                <Link onClick={() => setIsNavOpen(false)}>
-                  <IoClose />
-                </Link>
-              </div>
-            </div>
             <ul className="nav-lists">
               <li>
                 <NavLink to="/" className="nav-links">
@@ -102,6 +85,23 @@ function Header() {
                 </button>
               </li>
             </ul>
+            <div className="location-nav">
+              <div className="location-icon-box">
+                <a href="tel:+977-01-5904030">
+                  <FaPhoneAlt />
+                </a>
+              </div>
+              <div className="location-icon-box">
+                <a href="https://www.google.com/maps" target="_blank">
+                  <MdLocationPin />
+                </a>
+              </div>
+              <div className="location-icon-box">
+                <Link onClick={() => setIsNavOpen(false)}>
+                  <IoClose />
+                </Link>
+              </div>
+            </div>
           </nav>
           <button
             className="menu-toggle"

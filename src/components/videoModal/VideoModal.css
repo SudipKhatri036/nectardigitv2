@@ -21,7 +21,7 @@
 }
 
 .video-modal-cont {
-  width: 60%;
+  width: 80%;
 }
 
 .btn-modal-close:hover {
@@ -31,7 +31,11 @@
 
 @media (max-width: 768px) {
   .video-modal-cont {
-    width: 90%;
+    width: 100%;
+  }
+
+  .video-modal-cont iframe {
+    height: 300px;
   }
 }
 

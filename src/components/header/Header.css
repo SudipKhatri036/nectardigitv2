@@ -13,6 +13,10 @@
   padding: 2rem;
 }
 
+.logo {
+  z-index: 2;
+}
+
 .logo img {
   max-width: 20rem;
 }
@@ -139,6 +143,7 @@
     overflow-y: scroll;
     transform: translateX(-100%);
     transition: all 0.3s ease;
+    padding-top: 8rem;
   }
 
   .nav.nav--open {
@@ -222,11 +227,21 @@
 
 @media (max-width: 767px) {
   .nav {
-    max-width: 200px;
+    max-width: 400px;
   }
 
   .location-icon-box {
     padding: 1rem 2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: 350px) {
+  .logo img {
+    max-width: 15rem;
+  }
+
+  .nav {
+    max-width: 300px;
   }
 }

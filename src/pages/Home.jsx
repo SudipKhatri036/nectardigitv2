@@ -11,6 +11,7 @@ import NewContact from "../components/newContact/NewContact";
 import NewHomeHero from "../components/newHomeHero/NewHomeHero";
 import TestimonalSlider from "../components/testimonalSlider/TestimonalSlider";
 import HomeBlog from "../components/homeblog/HomeBlog";
+import TechStacks from "../components/techStacks/TechStacks";
 
 function Home() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -21,10 +22,10 @@ function Home() {
       <ClientList />
       <HomeAbout />
       <OurServices />
-      {/* <HomeBlog /> */}
-      <Faq />
-      <HomeCounters />
+      <TechStacks />
       <TestimonalSlider />
+      <HomeCounters />
+      <Faq />
       <NewContact />
       {screenWidth >= 1580 ? null : <ParticlesBackground />}
     </main>
