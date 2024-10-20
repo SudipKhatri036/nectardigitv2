@@ -12,20 +12,21 @@ import useAxios from "../../hooks/useAxios";
 import Loader from "../loader/Loader";
 
 import "./ProductDescription.css";
+import { useService } from "../../context/ServicesContext";
 
 function ServiceProductDescription() {
   const { id } = useParams();
 
   const navigate = useNavigate();
 
-  const { data, isLoading, error } = useAxios(`/services/${id}`, "GET", null, [
-    id,
-  ]);
+  const { data: service, isLoading, error } = useService();
 
-  const { data: service } = useAxios("services");
+  const ServiceDetails = service?.data.filter(
+    (ser) => ser.id === Number(id)
+  )[0];
 
   const filteredService = service?.data.filter(
-    (ser) => ser.id !== data?.data.id
+    (ser) => ser.id !== service?.data.id
   );
 
   let randomNum = Math.floor(Math.random() * filteredService?.length) + 1;
@@ -43,7 +44,7 @@ function ServiceProductDescription() {
     <section>
       <PageHero
         imgSrc="/images/web-development.jpg"
-        pageName={data?.data.title}
+        pageName={ServiceDetails.title}
       />
       <div className="single-service mt">
         <div className="container">
@@ -57,11 +58,11 @@ function ServiceProductDescription() {
               </div>
 
               <div className="single-service-content">
-                <h3>{data?.data.title}</h3>
+                <h3>{ServiceDetails.title}</h3>
 
                 <div
                   dangerouslySetInnerHTML={{
-                    __html: data?.data.description,
+                    __html: ServiceDetails.description,
                   }}
                 />
                 <Accordian />

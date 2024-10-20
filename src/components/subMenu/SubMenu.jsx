@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import useAxios from "../../hooks/useAxios";
 import Loader from "../loader/Loader";
+import { useMarketing } from "../../context/MarketingContext";
 
 function SubMenu({ isSubMenuOpen }) {
-  const { data, isLoading, error } = useAxios("/marketing");
+  const { data, isLoading, error } = useMarketing();
 
-  if (isLoading) <Loader />;
+  if (isLoading) return null;
 
   if (error) return <p className="fetch-error">Error: {error.message}</p>;
 

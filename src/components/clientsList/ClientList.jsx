@@ -2,8 +2,12 @@ import { FaArrowRight } from "react-icons/fa";
 import "./ClientList.css";
 import ClientCarousel from "../clientCarousel/ClientCarousel";
 import { Link } from "react-router-dom";
+import useAxios from "../../hooks/useAxios";
+import Loader from "../loader/Loader";
 
 function ClientList() {
+  const { data, isLoading } = useAxios("/clients");
+
   return (
     <section className="logo-section mb">
       <div className="container">
@@ -14,8 +18,12 @@ function ClientList() {
                 <h3>Our Clients</h3>
               </div>
             </div>
-            <div className="col-lg-7 col-md-7 col-sm-6 col-xs-6 ">
-              {/* <ClientCarousel clientsData={clientData} /> */}
+            <div className="col-lg-7 col-md-7 col-sm-6 col-xs-6 carosel-cont">
+              {isLoading ? (
+                <Loader />
+              ) : (
+                <ClientCarousel clientsData={data?.data} />
+              )}
             </div>
             <div className="col-lg-3 col-md-5 col-sm-6 col-xs-6">
               <div className="client-btn">

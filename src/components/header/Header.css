@@ -112,6 +112,12 @@
   display: none;
 }
 
+.nav-links-wsub button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
 @media (min-width: 910px) {
   .nav-links-wsub:hover .sub-menu {
     opacity: 1;

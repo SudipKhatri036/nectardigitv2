@@ -3,43 +3,55 @@ import "./Login.css";
 import { FaSignInAlt } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
+import axiosInstance from "../../api/PostApi";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [loginDetail, setLoginDetails] = useState({
-    email: "",
-    password: "",
-    error_list: [],
+    email: "nectardigit@gmail.com",
+    password: "admin123",
   });
+  const [token, setToken] = useState(null);
+
+  const navigate = useNavigate();
 
   const handleLoginInput = (e) => {
     setLoginDetails({ ...loginDetail, [e.target.name]: e.target.value });
   };
 
-  const loginSubmit = (e) => {
+  const loginSubmit = async (e) => {
     e.preventDefault();
 
-    const data = {
-      email: loginDetail.email,
-      password: loginDetail.password,
-    };
+    //   axios.get("/sanctum/csrf-cookie").then((response) => {
+    //     axios.post(`https://nectardigit.com/api/login`, data).then((res) => {
+    //       if (res.data.status === 200) {
+    //         localStorage.setItem("auth_token", res.data.token);
+    //         localStorage.setItem("auth_name", res.data.username);
+    //         swal("success", res.data.message, "success");
+    //         history.push("/");
+    //       } else if (res.data.status === 401) {
+    //         swal("Warning", res.data.message, "Warning");
+    //       } else {
+    //         setLoginDetails({
+    //           ...loginDetail,
+    //           error_list: res.data.validate_errors,
+    //         });
+    //       }
+    //     });
+    //   });
 
-    axios.get("/sanctum/csrf-cookie").then((response) => {
-      axios.post(`https://nectardigit.com/api/login`, data).then((res) => {
-        if (res.data.status === 200) {
-          localStorage.setItem("auth_token", res.data.token);
-          localStorage.setItem("auth_name", res.data.username);
-          swal("success", res.data.message, "success");
-          history.push("/");
-        } else if (res.data.status === 401) {
-          swal("Warning", res.data.message, "Warning");
-        } else {
-          setLoginDetails({
-            ...loginDetail,
-            error_list: res.data.validate_errors,
-          });
-        }
-      });
-    });
+    try {
+      const res = await axiosInstance.post("/login", loginDetail);
+      if (res.status === 200) {
+        localStorage.setItem("token", res.data.data.token);
+
+        window.location.href = "https://www.nectardigit.com/admin";
+      }
+      console.log(res);
+      // setToken(res?.data?.data?.token);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

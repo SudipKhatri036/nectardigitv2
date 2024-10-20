@@ -5,9 +5,10 @@ import SectionHeading from "../components/sectionHeading/SectionHeading";
 import ServiceCardNew from "../components/serviceCardNew/ServiceCardNew";
 import Loader from "../components/loader/Loader";
 import "./Services.css";
+import { useService } from "../context/ServicesContext";
 
 function Services() {
-  const { data, isLoading, error } = useAxios("/services");
+  const { data, isLoading, error } = useService();
 
   if (isLoading) return <Loader />;
 

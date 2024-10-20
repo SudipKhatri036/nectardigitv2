@@ -10,6 +10,7 @@ import ParticlesBackground from "../components/particles/ParticlesBackground";
 import NewContact from "../components/newContact/NewContact";
 import NewHomeHero from "../components/newHomeHero/NewHomeHero";
 import TestimonalSlider from "../components/testimonalSlider/TestimonalSlider";
+import HomeBlog from "../components/homeblog/HomeBlog";
 
 function Home() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -20,6 +21,7 @@ function Home() {
       <ClientList />
       <HomeAbout />
       <OurServices />
+      {/* <HomeBlog /> */}
       <Faq />
       <HomeCounters />
       <TestimonalSlider />

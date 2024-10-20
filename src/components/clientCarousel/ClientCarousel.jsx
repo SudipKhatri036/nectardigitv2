@@ -25,26 +25,13 @@ function ClientCarousel({ clientsData }) {
   };
   return (
     <Slider {...settings}>
-      {clientsData.map((client) => {
-        <div className="slide">
-          <img src={client.logo} alt="client" />
-        </div>;
+      {clientsData?.client.map((client) => {
+        return (
+          <div className="slide" key={client.id}>
+            <img src={client.logo} alt="client" referrerPolicy="no-referrer" />
+          </div>
+        );
       })}
-      <div className="slide">
-        <img src="/images/complete-cop-solution.png" alt="" />
-      </div>
-      <div className="slide">
-        <img src="./images/qandufurniture.jpg" alt="" />
-      </div>
-      <div className="slide">
-        <img src="/images/complete-cop-solution.png" alt="" />
-      </div>
-      <div className="slide">
-        <img src="./images/qandufurniture.jpg" alt="" />
-      </div>
-      <div className="slide">
-        <img src="/images/complete-cop-solution.png" alt="" />
-      </div>
     </Slider>
   );
 }

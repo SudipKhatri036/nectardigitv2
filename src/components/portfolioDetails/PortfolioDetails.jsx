@@ -21,8 +21,11 @@ function PortfolioDetails() {
         <div className="row">
           <div className="col-md-6">
             <div className="portfolio-details-img">
-              <img src="/images/airlogistics.png" alt="Air logistics" />
-              {/* <img src={image} alt="Air logistics" /> */}
+              <img
+                src={data?.data.image}
+                alt="Air logistics"
+                referrerpolicy="no-referrer"
+              />
             </div>
           </div>
           <div className="col-md-6">

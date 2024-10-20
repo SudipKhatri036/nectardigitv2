@@ -14,7 +14,7 @@ function PortfolioCard({ portfolioItem }) {
           onClick={() => navigate(`/portfolio/${id}`)}
         >
           <div className="portfolio-img">
-            <img src="/images/airlogistics.png" alt={title} />
+            <img src={logo || image} alt={title} referrerPolicy="no-referrer" />
           </div>
           <div className="portfolio-content">
             <span>{title}</span>

@@ -22,6 +22,10 @@
   transition: ease-in-out 0.3s;
 }
 
+.team-wrap:hover .team-img:before {
+  opacity: 1;
+}
+
 .team-content {
   padding: 20px;
   text-align: center;
@@ -30,6 +34,11 @@
 .team-wrap button {
   border: none;
   background: 0 0;
+}
+
+.team-wrap:hover {
+  box-shadow: 0 10px 20px rgb(0 0 0 / 35%);
+  transform: translateY(-5px);
 }
 
 .team-content span {

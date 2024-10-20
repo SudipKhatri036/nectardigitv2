@@ -24,11 +24,12 @@ function Header() {
         <div className="header-wrap">
           <div className="logo">
             <Link to="/" title="Nectar Digit">
-              <img src="  /images/site-logo.png" alt="Nectar Digit" />
-              {/* <img
+              {/* <img src="/images/site-logo.png" alt="Nectar Digit" /> */}
+              <img
                 src="https://www.nectardigit.com/uploads/photos/logo/site-logo.png"
                 alt="Nectar Digit"
-              /> */}
+                referrerPolicy="no-referrer"
+              />
             </Link>
           </div>
           <nav className={`nav${isNavOpen ? " nav--open" : ""}`}>
@@ -66,12 +67,12 @@ function Header() {
                 </NavLink>
               </li>
               <li className="nav-links-wsub">
-                <Link
+                <button
                   className="nav-links"
                   onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
                 >
                   Ad marketing <MdOutlineKeyboardArrowDown />
-                </Link>
+                </button>
                 <SubMenu isSubMenuOpen={isSubMenuOpen} />
               </li>
               <li>

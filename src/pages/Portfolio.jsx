@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageHero from "../components/pageHero/PageHero";
 import PortfolioPage from "../components/portfolioPage/PortfolioPage";
 
@@ -35,13 +35,16 @@ function Portfolio() {
     return <Loader />;
   }
 
+  console.log(data);
+
   return (
     <main className="portfolio">
       <PageHero
         imgSrc="/images/portfolio-banner-01-1.png"
         pageName="portfolio"
       />
-      <PortfolioPage client={data?.data.client} />
+
+      <PortfolioPage client={data?.data?.client} />
       <PaginationItem
         currentPage={currentPage}
         maxPage={maxPage}

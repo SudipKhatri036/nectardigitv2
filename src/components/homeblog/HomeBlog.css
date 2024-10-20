@@ -1,7 +1,12 @@
 .home-blog {
   margin-top: 7rem;
+  min-height: 600px;
 }
 
 .home-blog .blog-content ul {
   display: none;
+}
+
+.blog-card-show {
+  position: relative;
 }

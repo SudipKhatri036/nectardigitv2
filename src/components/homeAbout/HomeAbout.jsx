@@ -1,5 +1,21 @@
 import { Link } from "react-router-dom";
-import { FaCloudUploadAlt } from "react-icons/fa";
+import {
+  FaAppStore,
+  FaAt,
+  FaCloudUploadAlt,
+  FaDatabase,
+  FaHashtag,
+  FaHtml5,
+  FaJava,
+  FaLightbulb,
+  FaNetworkWired,
+  FaPencilRuler,
+  FaSearch,
+  FaShoppingBag,
+  FaTv,
+  FaUserLock,
+  FaWordpress,
+} from "react-icons/fa";
 import "./HomeAbout.css";
 
 function HomeAbout() {
@@ -22,59 +38,59 @@ function HomeAbout() {
             <span>Domain Registration</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaAt />
             <span>Web/Email Hosting</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaTv />
             <span>Responsive Website Design</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaHtml5 />
             <span>Website Development</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaLightbulb />
             <span>Digital Marketing</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaSearch />
             <span>Search Engine Optimization</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaWordpress />
             <span>Wordpress/CMS Solutions</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaShoppingBag />
             <span>Ecommerce/Online Store Solution</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaAppStore />
             <span>Custom Application Development</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaDatabase />
             <span>Software Architect Design and Development</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaHashtag />
             <span>Social Media Optimization</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaJava />
             <span>Mobile Application Development</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaUserLock />
             <span>Data Security</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaPencilRuler />
             <span>Graphic Design</span>
           </div>
           <div className="home-about-item">
-            <FaCloudUploadAlt />
+            <FaNetworkWired />
             <span>Hardware Networking</span>
           </div>
         </div>

@@ -32,6 +32,8 @@ const PrivacyPolicy = lazy(() =>
 import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Login from "./components/login/Login";
 import Loader from "./components/loader/Loader";
+import { ServicesProvider } from "./context/ServicesContext";
+import { MarketingProvider } from "./context/MarketingContext";
 
 // import About from "./pages/About";
 // import Services from "./pages/Services";
@@ -49,17 +51,50 @@ import Loader from "./components/loader/Loader";
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
-      {window.location.pathname !== "/login" ? <Header /> : null}
+      {window.location.pathname !== "/login" ? (
+        <>
+          <MarketingProvider>
+            <Header />
+          </MarketingProvider>
+        </>
+      ) : null}
 
       <ScrollToTop />
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <ServicesProvider>
+                <Home />
+              </ServicesProvider>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <ServicesProvider>
+                <Services />
+              </ServicesProvider>
+            }
+          />
+          <Route
+            path="/services/:id"
+            element={
+              <ServicesProvider>
+                <ServiceProductDescription />
+              </ServicesProvider>
+            }
+          />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/:id" element={<ServiceProductDescription />} />
-          <Route path="marketing/:id" element={<MarketingContent />} />
+          <Route
+            path="marketing/:id"
+            element={
+              <MarketingProvider>
+                <MarketingContent />
+              </MarketingProvider>
+            }
+          />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/:id" element={<PortfolioDetails />} />
           <Route path="/blogs" element={<Blog />} />
@@ -72,7 +107,7 @@ function App() {
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Suspense>
-      {/* <Footer /> */}
+
       {window.location.pathname !== "/login" ? <Footer /> : null}
     </BrowserRouter>
   );

@@ -7,12 +7,13 @@ import axios from "axios";
 import SmallSpinner from "../smallSpinner/SmallSpinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axiosInstance from "../../api/PostApi";
 
 const initialState = {
-  fullName: "",
-  contactNum: "",
+  name: "",
+  phone: "",
   email: "",
-  website: "",
+  subject: "",
   message: "",
 };
 
@@ -25,41 +26,39 @@ function NewContact() {
     setFormData((values) => ({ ...values, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const emailRegx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const validName = formData.fullName.trim().length > 0;
+    const validName = formData.name.trim().length > 0;
     const validEmail = emailRegx.test(formData.email);
-    console.log(validEmail);
 
     if (!validEmail && !validEmail) setIsValidData(false);
     else setIsValidData(true);
 
-    if (validName && validEmail && formData.contactNum) {
-      setIsPosting(true);
-      axios
-        .post("https://jsonplaceholder.typicode.com/posts", formData)
-        .then((resp) => {
-          console.log(resp);
-          setFormData(initialState);
-          toast.success("Form Submitted", {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => {
-          setIsPosting(false);
+    if (validName && validEmail && formData.phone) {
+      try {
+        setIsPosting(true);
+        const response = await axiosInstance.post("/contact", formData);
+
+        console.log(response);
+
+        setFormData(initialState);
+        toast.success("Form Submitted", {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
         });
+      } catch (err) {
+        console.log(err.response);
+      } finally {
+        setIsPosting(false);
+      }
     }
   };
 
@@ -104,10 +103,10 @@ function NewContact() {
                           placeholder="Name"
                           id="contact-name"
                           className="input-field"
-                          name="fullName"
+                          name="name"
                           required
                           onChange={handleChange}
-                          value={formData.fullName}
+                          value={formData.name}
                         />
                         {!isValidData ? (
                           <p className="contact-error">
@@ -122,12 +121,12 @@ function NewContact() {
                       <div className="form-group">
                         <input
                           className="input-field"
-                          name="contactNum"
+                          name="phone"
                           placeholder="Phone"
                           type="text"
                           required
                           onChange={handleChange}
-                          value={formData.contactNum}
+                          value={formData.phone}
                         />
                         {!isValidData ? (
                           <p className="contact-error">
@@ -165,9 +164,9 @@ function NewContact() {
                           type="text"
                           id="subject"
                           placeholder="Website"
-                          name="website"
+                          name="subject"
                           onChange={handleChange}
-                          value={formData.website}
+                          value={formData.subject}
                         />
                       </div>
                     </div>

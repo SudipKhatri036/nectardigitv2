@@ -361,7 +361,7 @@ textarea {
 
 .fetch-error {
   color: tomato;
-  font-size: 8rem;
+  font-size: 4rem;
   line-height: 8.2rem;
   padding-block: 4rem;
 }

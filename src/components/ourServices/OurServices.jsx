@@ -2,14 +2,12 @@ import { Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SectionHeading from "../sectionHeading/SectionHeading";
 import ServiceCardNew from "../serviceCardNew/ServiceCardNew";
-import useAxios from "../../hooks/useAxios";
-import Loader from "../loader/Loader";
+
 import "./OurServices.css";
+import { useService } from "../../context/ServicesContext";
 
 function OurServices() {
-  const { data, isLoading, error } = useAxios("/services");
-
-  if (isLoading) return <Loader />;
+  const { data, error } = useService();
 
   if (error) return <p className="fetch-error">Error: {error.message}</p>;
 

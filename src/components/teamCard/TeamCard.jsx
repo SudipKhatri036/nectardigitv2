@@ -7,7 +7,7 @@ function TeamCard({ team }) {
     <div className="col-lg-3 col-md-4 col-sm-6">
       <div className="team-wrap">
         <div className="team-img">
-          <img src="/images/team1.jpg" alt="Amrit Sparsha" />
+          <img src={image} alt={fullname} referrerPolicy="no-referrer" />
         </div>
         <div className="team-content">
           <a href="https://www.nectardigit.com/team/amrit-sparsha">

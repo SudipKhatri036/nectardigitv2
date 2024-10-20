@@ -1,4 +1,11 @@
 .slick-track {
   display: flex;
   gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide img {
+  min-height: 40px;
+  object-fit: cover;
 }

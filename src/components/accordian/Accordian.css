@@ -103,3 +103,25 @@
 .accordian-more-qs a {
   color: var(--color-primary);
 }
+
+@media (max-width: 450px) {
+  .accordion-header .accordion-button {
+    font-size: 1.5rem;
+  }
+
+  .accordion .card-body p {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 340px) {
+  .accordion-header .accordion-button {
+    font-size: 1.2rem;
+  }
+
+  .accordion .card-body p {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+}

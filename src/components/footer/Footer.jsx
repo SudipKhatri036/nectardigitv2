@@ -11,13 +11,12 @@ import NewsLetter from "../newsLetter/NewsLetter";
 import SocialIconsCont from "../socialIconsCont/SocialIconsCont";
 import useAxios from "../../hooks/useAxios";
 import Loader from "../loader/Loader";
+import ScrollToBtn from "../scrollToBtn/ScrollToBtn";
 
 function Footer() {
   const { data, isLoading, error } = useAxios("/services");
 
-  if (isLoading) return <Loader />;
-
-  if (error) return <p className="fetch-error">Error: {error.message}</p>;
+  if (error) return;
 
   return (
     <footer className="footer">
@@ -95,18 +94,23 @@ function Footer() {
           <div className="col-lg-3 col-md-4">
             <div className="footer-wrap footer-space1">
               <h3>Our Services</h3>
-              <ul className="footer-links">
-                {data?.data.slice(0, 6).map((data) => {
-                  return (
-                    <li key={data?.id}>
-                      <Link to={`services/${data?.id}`}>
-                        <FaAngleDoubleRight className="a-before" />
-                        {data?.title}
-                      </Link>
-                    </li>
-                  );
-                })}
-              </ul>
+
+              {error && <p className="fetch-error">Error: {error.message}</p>}
+
+              {isLoading ? null : (
+                <ul className="footer-links">
+                  {data?.data.slice(0, 6).map((data) => {
+                    return (
+                      <li key={data?.id}>
+                        <Link to={`services/${data?.id}`}>
+                          <FaAngleDoubleRight className="a-before" />
+                          {data?.title}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
             </div>
           </div>
 
@@ -182,6 +186,7 @@ function Footer() {
           </ul>
         </div>
       </div>
+      <ScrollToBtn />
     </footer>
   );
 }

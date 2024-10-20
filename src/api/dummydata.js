@@ -196,6 +196,39 @@ const portfolio = [
   },
 ];
 
+const homeBlogFeatured = [
+  {
+    id: 1,
+    title: "What is the marketplace?",
+    content:
+      "Simply a marketplace is a website just like a shopping mall does in real-life. Where the products offered come from multiple sellers. The variety of assortment a marketplace offers is exactly what attracts customers...",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2023/04/14/03/21/money-7923867_1280.jpg",
+    author: "Nectar Digit",
+    date: "2081.10.12",
+  },
+  {
+    id: 3,
+    title: "Search Engine Optimization (SEO)",
+    content:
+      "Search Engine Optimization (SEO) is the method of increasing the quantity and quality of business to your website via organic search engine results. SEO targets unpaid business rather than direct business or paid busi...",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2016/04/13/22/42/seo-1327870_1280.png",
+    author: "Nectar Digit",
+    date: "2081.10.12",
+  },
+  {
+    id: 3,
+    title: "Technologies trends in Nepal",
+    content:
+      "The technology trend is a skill that refers to being attentive to the technology that is recently growing popular and is readily accepted in the market or business. It includes one’s strength to recognize and unde...",
+    imgUrl:
+      "https://cdn.pixabay.com/photo/2021/10/11/17/54/technology-6701504_1280.jpg",
+    author: "Nectar Digit",
+    date: "2081.10.12",
+  },
+];
+
 const api = "https://www.nectardigit.com/api/slider";
 
-export { services, accordionItems, portfolio };
+export { services, accordionItems, portfolio, homeBlogFeatured };

@@ -13,17 +13,19 @@ function CustomerSatisfaction({ aboutSatisfy }) {
         />
         <div className="row">
           {aboutSatisfy?.map((satisfyData) => {
+            const { id, image, title, description } = satisfyData || {};
             return (
-              <div key={satisfyData?.id} className="col-lg-4 col-md-6">
+              <div key={id} className="col-lg-4 col-md-6">
                 <div className="how-section-wrap hvr-buzz-out">
                   <img
-                    src="/images/social-listening.png"
+                    src={image}
                     alt="Social Listening"
+                    referrerPolicy="no-referrer"
                   />
-                  <h3>{satisfyData.title}</h3>
+                  <h3>{title}</h3>
                   <div
                     dangerouslySetInnerHTML={{
-                      __html: satisfyData.description,
+                      __html: description,
                     }}
                   />
                 </div>

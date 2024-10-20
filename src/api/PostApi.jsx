@@ -4,9 +4,9 @@ const axiosInstance = axios.create({
   baseURL: "https://www.nectardigit.com/api",
 });
 
-export const getData = (endP) => {
-  return api.get(`${endP}`);
-};
+// export const getData = (endP) => {
+//   return api.get(`${endP}`);
+// };
 
 // Request Interceptor
 axiosInstance.interceptors.request.use(
