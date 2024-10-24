@@ -27,7 +27,9 @@ function Home() {
       <HomeCounters />
       <Faq />
       <NewContact />
-      {screenWidth >= 1580 ? null : <ParticlesBackground />}
+      {screenWidth >= 1580 || screenWidth <= 550 ? null : (
+        <ParticlesBackground />
+      )}
     </main>
   );
 }

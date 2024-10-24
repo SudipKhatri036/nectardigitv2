@@ -39,6 +39,12 @@
   }
 }
 
+@media (max-width: 550px) {
+  .btn-modal-close {
+    font-size: 3rem;
+  }
+}
+
 @keyframes openVideo {
   from {
     background-color: white;

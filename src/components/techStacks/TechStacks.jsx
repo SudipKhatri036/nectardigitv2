@@ -19,21 +19,25 @@ function TechStacks() {
         breakpoint: 1024,
         settings: {
           slidesToShow: 5,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 1,
         },
       },
       {
         breakpoint: 500,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 350,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -49,25 +53,25 @@ function TechStacks() {
         />
 
         <Slider {...settings}>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/atom.png" alt="Icon" className="tech-icon" />
           </div>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/css.png" alt="Icon" className="tech-icon" />
           </div>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/html.png" alt="Icon" className="tech-icon" />
           </div>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/docker.png" alt="Icon" className="tech-icon" />
           </div>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/js.png" alt="Icon" className="tech-icon" />
           </div>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/php.png" alt="Icon" className="tech-icon" />
           </div>
-          <div className="tech-slide">
+          <div className="tech-slide" inert="true">
             <img src="/techs/java.png" alt="Icon" className="tech-icon" />
           </div>
         </Slider>

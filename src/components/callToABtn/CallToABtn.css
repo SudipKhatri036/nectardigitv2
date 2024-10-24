@@ -6,12 +6,26 @@
   background: #25cc62;
   animation: waves-call-now linear 3s infinite;
   cursor: pointer;
+  position: fixed;
+  bottom: 90px;
+  right: 24px;
+  z-index: 8000;
 }
 
 .call-now-button img {
   width: 35px;
   filter: invert(1);
   animation: sm-shake-animation linear 1.5s infinite;
+}
+
+@media (max-width: 550px) {
+  .call-now-button {
+    right: 8px;
+  }
+
+  .call-now-button img {
+    width: 20px;
+  }
 }
 
 @keyframes waves-call-now {

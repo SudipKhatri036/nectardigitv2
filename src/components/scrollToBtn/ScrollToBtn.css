@@ -2,8 +2,7 @@
   display: inline-block;
   height: 60px;
   position: fixed;
-  top: 80%;
-  bottom: 10%;
+  top: 90%;
   right: 2%;
   z-index: 99;
 }
